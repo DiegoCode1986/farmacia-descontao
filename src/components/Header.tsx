@@ -8,7 +8,7 @@ export const Header = () => {
   const navItems = [
     { name: "Home", href: "/" },
     { name: "A Descontão", href: "#about" },
-    { name: "Ofertas", href: "#offers" },
+    { name: "Ofertas", href: "/ofertas" },
     { name: "Lojas / Unidades", href: "#stores" },
     { name: "Contato", href: "#contact" },
     { name: "Trabalhe Conosco", href: "#careers" },
