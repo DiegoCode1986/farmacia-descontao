@@ -200,6 +200,7 @@ export default function Offers() {
           title="Produtos em Destaque"
           products={productsDestaque}
           bgColor="bg-background"
+          bannerImage="https://images.unsplash.com/photo-1556228852-80a5086d0d8e?w=1200&h=300&fit=crop"
         />
 
         {/* Best Sellers */}
@@ -207,6 +208,7 @@ export default function Offers() {
           title="Mais Vendidos"
           products={productsMaisVendidos}
           bgColor="bg-muted/30"
+          bannerImage="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1200&h=300&fit=crop"
         />
 
         {/* Dermocosmetics */}
@@ -214,6 +216,7 @@ export default function Offers() {
           title="Dermocosméticos Selecionados"
           products={productsDermocosmeticos}
           bgColor="bg-background"
+          bannerImage="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=1200&h=300&fit=crop"
         />
       </main>
 

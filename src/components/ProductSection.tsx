@@ -14,12 +14,14 @@ interface ProductSectionProps {
   title: string;
   products: Product[];
   bgColor?: string;
+  bannerImage?: string;
 }
 
 export const ProductSection = ({
   title,
   products,
   bgColor = "bg-background",
+  bannerImage,
 }: ProductSectionProps) => {
   return (
     <section className={`${bgColor} py-12`}>
@@ -28,6 +30,16 @@ export const ProductSection = ({
           <span className="text-primary">{title.split(" ")[0]}</span>{" "}
           <span className="text-secondary">{title.split(" ").slice(1).join(" ")}</span>
         </h2>
+        
+        {bannerImage && (
+          <div className="mb-8">
+            <img 
+              src={bannerImage} 
+              alt={`Banner ${title}`}
+              className="w-full h-auto max-h-[200px] md:max-h-[300px] object-cover rounded-lg shadow-md"
+            />
+          </div>
+        )}
         
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-6">
           {products.map((product) => (
