@@ -9,7 +9,7 @@ export const Header = () => {
     { name: "Home", href: "/" },
     { name: "A Descontão", href: "#about" },
     { name: "Ofertas", href: "/ofertas" },
-    { name: "Lojas / Unidades", href: "#stores" },
+    { name: "Lojas / Unidades", href: "/lojas" },
     { name: "Contato", href: "#contact" },
     { name: "Trabalhe Conosco", href: "#careers" },
     { name: "Blog", href: "#blog" },
