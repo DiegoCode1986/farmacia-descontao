@@ -5,12 +5,12 @@ import heroBanner2 from "@/assets/hero-banner-2.jpg";
 
 const slides = [
   {
-    image: heroBanner1,
+    image: "/public/imagens/banner-anticoncepcionais.jpg",
     alt: "Promoções Farmácia Descontão",
     link: "#",
   },
   {
-    image: heroBanner2,
+    image:"/public/imagens/banner-glicemia.jpg",
     alt: "Feirão do Bebê",
     link: "#",
   },

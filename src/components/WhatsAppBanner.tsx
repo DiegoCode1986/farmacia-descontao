@@ -11,7 +11,7 @@ export const WhatsAppBanner = () => {
           className="block group"
         >
           <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-secondary to-pharmacy-green-light p-8 md:p-12 transition-all duration-300 hover:shadow-2xl hover:scale-[1.02]">
-            <div className="flex flex-col md:flex-row items-center justify-center gap-6 text-center md:text-left">
+            <div className="flex flex-col md:flex-row items-center justify-center gap-4 text-center md:text-left">
               <div className="bg-card/20 p-6 rounded-full group-hover:scale-110 transition-transform duration-300">
                 <MessageCircle className="h-16 w-16 md:h-20 md:w-20 text-secondary-foreground" />
               </div>
@@ -24,7 +24,7 @@ export const WhatsAppBanner = () => {
                 </p>
               </div>
             </div>
-            <div className="absolute top-0 right-0 w-64 h-64 bg-card/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+            <div className="absolute top-0 right-0 w-44 h-44 bg-card/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
           </div>
         </a>
       </div>
