@@ -53,9 +53,9 @@ export const Header = () => {
             <div className="flex-shrink-0">
               <a href="/" className="flex items-center">
                 <img 
-                  src="/public/imagens/descontologo.PNG" 
-                  alt="Farmácia Descontão" 
-                  className="h-16"
+                  src="/imagens/descontologo.PNG" 
+                  alt="Farmácia Descontão - logo" 
+                  className="h-16 w-auto"
                 />
               </a>
             </div>

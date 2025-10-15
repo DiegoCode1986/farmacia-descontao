@@ -200,7 +200,7 @@ export default function Offers() {
           title="Produtos em Destaque"
           products={productsDestaque}
           bgColor="bg-background"
-          bannerImage="/public/imagens/Banner-produtos.jpg"
+          bannerImage="/imagens/Banner-produtos.jpg"
         />
 
         {/* Best Sellers */}
@@ -208,7 +208,7 @@ export default function Offers() {
           title="Mais Vendidos"
           products={productsMaisVendidos}
           bgColor="bg-muted/30"
-          bannerImage="/public/imagens/manipulacao-campinas.jpg"
+          bannerImage="/imagens/manipulacao-campinas.jpg"
         />
 
         {/* Dermocosmetics */}
