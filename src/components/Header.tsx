@@ -1,124 +1,133 @@
-import { Facebook, Instagram, MapPin, Menu, Clock, Phone, Search } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Facebook, Instagram, Menu, Phone, X } from "lucide-react";
 import { useState } from "react";
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [searchQuery, setSearchQuery] = useState("");
 
   const navItems = [
     { name: "Home", href: "/" },
     { name: "Ofertas", href: "/ofertas" },
-    { name: "A Descontão", href: "/A Descontão" },
+    { name: "A Descontão", href: "/a-descontao" },
     { name: "Manipulação", href: "/manipulacao" },
     { name: "Lojas", href: "/lojas" },
     { name: "Contato", href: "#contact" },
   ];
 
   return (
-    <header className="w-full bg-white shadow-md">
-      {/* Top Bar */}
-      <div className="bg-primary">
-        <div className="container mx-auto px-4 py-2">
-          <div className="flex flex-col md:flex-row items-center justify-between text-white text-sm">
-            <div className="flex items-center gap-4">
-              <div className="flex items-center gap-2">
-                <Clock className="h-4 w-4" />
-                <span>Segunda a Sexta: 8h às 22h | Sábado: 9h às 21h | Domingo: 9h às 20h</span>
-              </div>
+    <header className="w-full bg-background border-b border-border sticky top-0 z-50">
+      <div className="container mx-auto px-4 lg:px-8">
+        <div className="flex items-center justify-between h-20">
+          {/* Logo */}
+          <div className="flex-shrink-0">
+            <a href="/" className="flex items-center">
+              <img 
+                src="/imagens/descontologo.PNG" 
+                alt="Farmácia Descontão" 
+                className="h-12 md:h-14 w-auto"
+              />
+            </a>
+          </div>
+
+          {/* Desktop Navigation */}
+          <nav className="hidden lg:flex items-center gap-8">
+            {navItems.map((item) => (
+              <a
+                key={item.name}
+                href={item.href}
+                className="text-foreground font-medium hover:text-primary transition-colors text-sm"
+              >
+                {item.name}
+              </a>
+            ))}
+          </nav>
+
+          {/* Contact & Social */}
+          <div className="hidden lg:flex items-center gap-4">
+            <a 
+              href="tel:+554130438200" 
+              className="flex items-center gap-2 text-foreground hover:text-primary transition-colors text-sm font-medium"
+            >
+              <Phone className="h-4 w-4" />
+              <span>(41) 3043-8200</span>
+            </a>
+            <div className="flex items-center gap-3 pl-4 border-l border-border">
+              <a 
+                href="https://www.facebook.com" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                aria-label="Facebook"
+                className="text-foreground hover:text-primary transition-colors"
+              >
+                <Facebook className="h-5 w-5" />
+              </a>
+              <a 
+                href="https://www.instagram.com" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                aria-label="Instagram"
+                className="text-foreground hover:text-primary transition-colors"
+              >
+                <Instagram className="h-5 w-5" />
+              </a>
             </div>
-            <div className="flex items-center gap-6 mt-2 md:mt-0">
-              <a href="tel:+554130438200" className="flex items-center gap-2 hover:underline">
+          </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="lg:hidden p-2 text-foreground hover:text-primary transition-colors"
+            aria-label="Toggle menu"
+          >
+            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          </button>
+        </div>
+
+        {/* Mobile Navigation */}
+        {isMenuOpen && (
+          <nav className="lg:hidden py-4 border-t border-border">
+            <ul className="flex flex-col gap-2">
+              {navItems.map((item) => (
+                <li key={item.name}>
+                  <a
+                    href={item.href}
+                    className="block px-4 py-3 text-foreground hover:bg-muted rounded-lg font-medium transition-colors"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {item.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+            <div className="flex items-center justify-center gap-6 mt-4 pt-4 border-t border-border">
+              <a 
+                href="tel:+554130438200" 
+                className="flex items-center gap-2 text-foreground hover:text-primary transition-colors text-sm font-medium"
+              >
                 <Phone className="h-4 w-4" />
                 <span>(41) 3043-8200</span>
               </a>
-              <div className="hidden md:flex items-center gap-4">
-                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                  <Facebook className="h-5 w-5 hover:opacity-80 transition-opacity" />
-                </a>
-                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                  <Instagram className="h-5 w-5 hover:opacity-80 transition-opacity" />
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Main Header */}
-      <div className="bg-white">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            {/* Logo */}
-            <div className="flex-shrink-0">
-              <a href="/" className="flex items-center">
-                <img 
-                  src="/imagens/descontologo.PNG" 
-                  alt="Farmácia Descontão - logo" 
-                  className="h-16 w-auto"
-                />
+              <a 
+                href="https://www.facebook.com" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                aria-label="Facebook"
+                className="text-foreground hover:text-primary transition-colors"
+              >
+                <Facebook className="h-5 w-5" />
+              </a>
+              <a 
+                href="https://www.instagram.com" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                aria-label="Instagram"
+                className="text-foreground hover:text-primary transition-colors"
+              >
+                <Instagram className="h-5 w-5" />
               </a>
             </div>
-
-            {/* Search Bar */}
-            <div className="relative flex-1 max-w-2xl mx-4">
-              <div className="relative">
-                <input
-                  type="text"
-                  placeholder="O que você está procurando?"
-                  className="w-full py-2 pl-4 pr-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                />
-                <button className="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-primary">
-                  <Search className="h-5 w-5" />
-                </button>
-              </div>
-            </div>
-
-            {/* Store Locator */}
-            <div className="hidden md:flex items-center gap-3 bg-gray-100 hover:bg-gray-200 transition-colors rounded-lg p-3 cursor-pointer">
-              <MapPin className="h-6 w-6 text-primary" />
-              <div className="text-left">
-                <p className="text-sm text-gray-600">Encontre a</p>
-                <p className="font-bold text-primary">Farmácia mais próxima</p>
-              </div>
-            </div>
-          </div>
-        </div>
+          </nav>
+        )}
       </div>
-
-      {/* Navigation */}
-      <nav className="bg-primary">
-        <div className="container mx-auto px-4">
-          <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden w-full py-3 flex items-center justify-center gap-2 text-white font-medium"
-          >
-            <Menu className="h-5 w-5" />
-            MENU
-          </button>
-
-          <ul
-            className={`${
-              isMenuOpen ? "flex" : "hidden"
-            } md:flex flex-col md:flex-row items-center`}
-          >
-            {navItems.map((item, index) => (
-              <li key={index} className="w-full md:w-auto">
-                <a
-                  href={item.href}
-                  className={`block px-6 py-3 text-white font-medium hover:bg-primary-dark transition-colors ${
-                    index === 0 ? "bg-primary-dark" : ""
-                  }`}
-                >
-                  {item.name}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </nav>
     </header>
   );
 };
