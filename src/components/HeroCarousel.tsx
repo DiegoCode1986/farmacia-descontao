@@ -40,7 +40,7 @@ export const HeroCarousel = () => {
 
   return (
     <section className="relative w-full overflow-hidden bg-muted">
-      <div className="relative aspect-[16/6] md:aspect-[16/5] lg:aspect-[16/4] max-h-[600px]">
+      <div className="relative aspect-[16/8] md:aspect-[16/6] lg:aspect-[21/5] max-h-[400px]">
         {slides.map((slide, index) => (
           <a
             key={index}
