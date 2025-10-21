@@ -1,5 +1,6 @@
 import { Header } from "@/components/Header";
-import { HeroCarousel } from "@/components/HeroCarousel";
+import { HeroSection } from "@/components/HeroSection";
+import { BenefitsBar } from "@/components/BenefitsBar";
 import { CategorySection } from "@/components/CategorySection";
 import { ProductCarousel } from "@/components/ProductCarousel";
 import { PromotionsSection } from "@/components/PromotionsSection";
@@ -12,14 +13,21 @@ const Index = () => {
     <div className="min-h-screen flex flex-col bg-white">
       <Header />
       <main className="flex-1">
-        <HeroCarousel />
-        <CategorySection />
+        <HeroSection />
+        <BenefitsBar />
+        <div id="categorias">
+          <CategorySection />
+        </div>
         <div className="container mx-auto px-4 py-8">
           <ProductCarousel />
         </div>
         <PromotionsSection />
-        <ServicesSection />
-        <ContactSection />
+        <div id="servicos">
+          <ServicesSection />
+        </div>
+        <div id="contato">
+          <ContactSection />
+        </div>
       </main>
       <Footer />
     </div>
