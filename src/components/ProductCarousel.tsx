@@ -3,11 +3,11 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const products = [
   { name: "Vitamina C 1000mg", oldPrice: 48.0, price: 35.9, discount: 25, image: "imagens/vitamina_c.png" },
-  { name: "Ômega 3", oldPrice: 58.0, price: 42.5, discount: 27, image: "https://via.placeholder.com/300x300?text=Omega+3" },
-  { name: "Multivitamínico", oldPrice: 52.0, price: 38.9, discount: 25, image: "https://via.placeholder.com/300x300?text=Multi" },
-  { name: "Colágeno Hidrolisado", oldPrice: 75.0, price: 55.0, discount: 27, image: "https://via.placeholder.com/300x300?text=Colageno" },
-  { name: "Vitamina D3", oldPrice: 38.0, price: 28.9, discount: 24, image: "https://via.placeholder.com/300x300?text=Vit+D3" },
-  { name: "Magnésio Dimalato", oldPrice: 45.0, price: 32.5, discount: 28, image: "https://via.placeholder.com/300x300?text=Magnesio" },
+  { name: "Ômega 3", oldPrice: 58.0, price: 42.5, discount: 27, image: "imagens/omega3.png" },
+  { name: "Multivitamínico", oldPrice: 52.0, price: 38.9, discount: 25, image: "imagens/multivitaminico.png" },
+  { name: "Colágeno Hidrolisado", oldPrice: 75.0, price: 55.0, discount: 27, image: "imagens/colageno.png" },
+  { name: "Vitamina D3", oldPrice: 38.0, price: 28.9, discount: 24, image: "imagens/Vitamina-D3.png" },
+  { name: "Magnésio Dimalato", oldPrice: 45.0, price: 32.5, discount: 28, image: "imagens/dimalato.png" },
 ];
 
 export const ProductCarousel = () => {
